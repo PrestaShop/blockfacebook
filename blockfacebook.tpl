@@ -24,11 +24,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if $facebookurl != ''}
+{if !$facebookurl|strstr:"facebook.com"}{$facebookurl="https://www.facebook.com/`$facebookurl`"}{/if}
 <div id="fb-root"></div>
 <div id="facebook_block" class="col-xs-4">
 	<h4 >{l s='Follow us on facebook' mod='blockfacebook'}</h4>
 	<div class="facebook-fanbox">
-		<div class="fb-like-box" data-href="http://www.facebook.com/{$facebookurl|escape:'html':'UTF-8'}" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false">
+		<div class="fb-like-box" data-href="{$facebookurl|escape:'html':'UTF-8'}" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false">
 		</div>
 	</div>
 </div>
