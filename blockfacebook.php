@@ -71,7 +71,9 @@ class BlockFacebook extends Module
 		}
 
 		$html .= $this->renderForm();
-		$this->context->smarty->assign('facebookurl', Configuration::get('blockfacebook_url'));
+		$facebookurl = Configuration::get('blockfacebook_url');
+		if(!strstr($facebookurl, "facebook.com")) $facebookurl="https://www.facebook.com/".$facebookurl;
+		$this->context->smarty->assign('facebookurl', $facebookurl);
 		$this->context->smarty->assign('facebook_js_url', $this->_path.'blockfacebook.js');
 		$this->context->smarty->assign('facebook_css_url', $this->_path.'css/blockfacebook.css');
 		$html .= $this->context->smarty->fetch($this->local_path.'views/admin/_configure/preview.tpl');
@@ -81,7 +83,9 @@ class BlockFacebook extends Module
 	public function hookDisplayHome()
 	{
 		if (!$this->isCached('blockfacebook.tpl', $this->getCacheId()))
-			$this->context->smarty->assign('facebookurl', Configuration::get('blockfacebook_url'));
+					$facebookurl = Configuration::get('blockfacebook_url');
+					if(!strstr($facebookurl, "facebook.com")) $facebookurl="https://www.facebook.com/".$facebookurl;
+					$this->context->smarty->assign('facebookurl', $facebookurl);
 
 		return $this->display(__FILE__, 'blockfacebook.tpl', $this->getCacheId());
 	}
