@@ -107,7 +107,7 @@ class BlockFacebook extends Module
 				'input' => array(
 					array(
 						'type' => 'text',
-						'label' => $this->l('Facebook link'),
+						'label' => $this->l('Facebook link (full URL is required)'),
 						'name' => 'blockfacebook_url',
 					),
 				),
