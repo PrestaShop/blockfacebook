@@ -33,7 +33,7 @@ class BlockFacebook extends Module
 	{
 		$this->name = 'blockfacebook';
 		$this->tab = 'front_office_features';
-		$this->version = '1.2';
+		$this->version = '1.3';
 		$this->author = 'PrestaShop';
 
 		$this->bootstrap = true;
@@ -83,10 +83,12 @@ class BlockFacebook extends Module
 	public function hookDisplayHome()
 	{
 		if (!$this->isCached('blockfacebook.tpl', $this->getCacheId()))
-					$facebookurl = Configuration::get('blockfacebook_url');
-					if(!strstr($facebookurl, "facebook.com")) $facebookurl="https://www.facebook.com/".$facebookurl;
-					$this->context->smarty->assign('facebookurl', $facebookurl);
-
+		{
+			$facebookurl = Configuration::get('blockfacebook_url');
+			if (!strstr($facebookurl, 'facebook.com'))
+				$facebookurl = 'https://www.facebook.com/'.$facebookurl;
+			$this->context->smarty->assign('facebookurl', $facebookurl);
+		}
 		return $this->display(__FILE__, 'blockfacebook.tpl', $this->getCacheId());
 	}
 
