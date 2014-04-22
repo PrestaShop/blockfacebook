@@ -1,3 +1,4 @@
+2014-04-22 18:57:13 +0200	// Changelog updated
 2014-04-01 16:41:02 +0200	// fix bracket missing && ++version
 2014-04-01 14:13:46 +0200	Merge pull request #1 from f31n/patch-1
 2014-03-29 23:49:00 +0300	// full url is required for blockFacebook
