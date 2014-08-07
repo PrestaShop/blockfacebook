@@ -92,6 +92,16 @@ class BlockFacebook extends Module
 		return $this->display(__FILE__, 'blockfacebook.tpl', $this->getCacheId());
 	}
 
+	public function hookDisplayLeftColumn()
+	{
+		return $this->hookDisplayHome();
+	}
+
+	public function hookDisplayRightColumn()
+	{
+		return $this->hookDisplayHome();
+	}
+
 	public function hookHeader()
 	{
 		$this->page_name = Dispatcher::getInstance()->getController();
