@@ -94,11 +94,21 @@ class BlockFacebook extends Module
 
 	public function hookDisplayLeftColumn()
 	{
+		if ($this->page_name !== 'index')
+		{
+			$this->context->controller->addCss(($this->_path).'css/blockfacebook.css');
+			$this->context->controller->addJS(($this->_path).'blockfacebook.js');
+		}
 		return $this->hookDisplayHome();
 	}
 
 	public function hookDisplayRightColumn()
 	{
+		if ($this->page_name !== 'index')
+		{
+			$this->context->controller->addCss(($this->_path).'css/blockfacebook.css');
+			$this->context->controller->addJS(($this->_path).'blockfacebook.js');
+		}
 		return $this->hookDisplayHome();
 	}
 
