@@ -3,7 +3,7 @@
 {if $facebookurl != ''}
 <div class="bootstrap panel">
 	<div class="panel-heading">
-		<i class="icon-picture-o"></i> {l s="Preview"}
+		<i class="icon-picture-o"></i> {l s='Preview' mod='blockfacebook'}
 	</div>
 	<div id="fb-root"></div>
 	<div id="facebook_block">
