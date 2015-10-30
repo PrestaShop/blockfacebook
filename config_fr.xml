@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>blockfacebook</name>
-	<displayName><![CDATA[Facebook block]]></displayName>
+	<displayName><![CDATA[Bloc Facebook Like Box]]></displayName>
 	<version><![CDATA[1.5.0]]></version>
-	<description><![CDATA[Displays a block for subscribing to your Facebook page.]]></description>
+	<description><![CDATA[Affiche un bloc pour s&#039;inscrire &agrave; votre page Facebook.]]></description>
 	<author><![CDATA[PrestaShop]]></author>
 	<tab><![CDATA[front_office_features]]></tab>
 	<is_configurable>1</is_configurable>

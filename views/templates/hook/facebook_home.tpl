@@ -1,4 +1,4 @@
-/*
+{*
 * 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
@@ -19,19 +19,20 @@
 *
 *  @author PrestaShop SA <contact@prestashop.com>
 *  @copyright  2007-2015 PrestaShop SA
+
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
-*/
-$(document).ready(function() {
-	initfb(document, 'script', 'facebook-jssdk');
-});
-
-function initfb(d, s, id)
-{
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) 
-		return;
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=334341610034299";
-	fjs.parentNode.insertBefore(js, fjs);
-}
+*}
+{if $facebook_url != ''}
+<div id="fb-root"></div>
+<div id="facebook_block" class="col-xs-4">
+	<h4>{l s='Follow us on Facebook' mod='blockfacebook'}</h4>
+	<div class="facebook-fanbox">
+		<div class="fb-page" data-href="{$facebook_url|escape:'html':'UTF-8'}" data-adapt_container_width="true" data-hide-cover="{$facebook_hidecover}" data-show-facepile="{$facebook_showfacepile}" data-show-posts="{$facebook_showposts}" data-small-header="{$facebook_smallheader}" data-hide-cta="{$facebook_hidecta}">
+			<div class="fb-xfbml-parse-ignore">
+				<blockquote cite="{$facebook_url|escape:'html':'UTF-8'}"><a href="{$facebook_url|escape:'html':'UTF-8'}">{$shop_name}</a></blockquote></div>
+			</div>
+		</div>
+	</div>
+</div>
+{/if}
