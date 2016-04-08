@@ -40,7 +40,7 @@ class BlockFacebook extends Module
 		parent::__construct();
 		$this->displayName = $this->l('Facebook Like Box block');
 		$this->description = $this->l('Displays a block for subscribing to your Facebook Page.');
-		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
+		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => '1.6.99.99');
 	}
 
 
