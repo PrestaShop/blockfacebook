@@ -33,7 +33,7 @@ class BlockFacebook extends Module
 	{
 		$this->name = 'blockfacebook';
 		$this->tab = 'front_office_features';
-		$this->version = '1.4.0';
+		$this->version = '1.4.1';
 		$this->author = 'PrestaShop';
 
 		$this->bootstrap = true;
